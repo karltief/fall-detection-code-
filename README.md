@@ -26,19 +26,5 @@ _BEng EEE Honours Project 2024-25_
 
 ---
 
-## Quick-Start
 
-### 1  Set-up
-
-```bash
-# Clone & enter repo
-git clone https://github.com/<your-user>/<repo>.git
-cd <repo>
-
-# Python 3.10+ venv
-python -m venv .venv
-source .venv/bin/activate         # Windows: .venv\Scripts\activate
-
-# Install deps
-pip install -r requirements.txt   # OpenCV, scikit-learn, djitellopy, etc.
 
