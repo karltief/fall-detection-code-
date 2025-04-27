@@ -9,8 +9,8 @@ _BEng EEE Honours Project 2024-25_
 
 | File / Dir | Purpose |
 |------------|---------|
-| **main.py** | Primary entry-point – connects to drone/camera, loads chosen model, runs detection loop. |
-| **main_m1.py** | Alternate entry-point for “method 1” experiments (kept for reproducibility). |
+| **main.py** | Python file for sourcing the photos and putting the landmarks into an array for dataset 2 |
+| **main_m1.py** | Python file for sourcing the photos and putting the landmarks into an array for dataset 1 |
 | **camera.py** | Generic USB/web-cam frame capture. |
 | **camera_drone.py** | Tello video-stream wrapper built on `djitellopy`. |
 | **functions.py** | Utility helpers (frame pre-proc, drawing bboxes, SMS/e-mail alerts, logging). |
