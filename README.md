@@ -20,13 +20,14 @@ _BEng EEE Honours Project 2024-25_
 | **C_parameter_*.py** | Grid-search scripts to tune the `C` hyper-parameter for LR & SVM (baseline vs. method 1). |
 | **README.md** | This file. |
 
-> **\m1**  
+> **_m1**  
 > “method 1” refers to dataset 1
 >
 > download the dataset from https://www.kaggle.com/datasets/uttejkumarkandagatla/fall-detection-dataset
 > 
-> **\_m2**  
+> **_m2**  
 > “method 2” refers to dataset 2
+> 
 > download the dataset from https://www.kaggle.com/datasets/tuyenldvn/caucafall
 ---
 
