@@ -22,10 +22,12 @@ _BEng EEE Honours Project 2024-25_
 
 > **\_m1”**  
 > “method 1” refers to dataset 1
-> \download the dataset from https://www.kaggle.com/datasets/uttejkumarkandagatla/fall-detection-dataset
+>
+> download the dataset from https://www.kaggle.com/datasets/uttejkumarkandagatla/fall-detection-dataset
 > **\_m2”**  
 > “method 2” refers to dataset 2
-> \download the dataset from https://www.kaggle.com/datasets/tuyenldvn/caucafall
+>
+> download the dataset from https://www.kaggle.com/datasets/tuyenldvn/caucafall
 ---
 
 
