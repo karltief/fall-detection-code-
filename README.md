@@ -1,19 +1,44 @@
-# fall-detection-code-
- 
-_BEng Electronics & Electrical Engineering Honours Project (2024-25)_
+# RoboMaster Tello TT – Fall & Emergency-Gesture Detection  
+_BEng EEE Honours Project 2024-25_
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](#) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) 
-![CI](https://img.shields.io/github/actions/workflow/status/<your-user>/<repo>/ci.yml)
-
-A cross-platform (Linux & Windows) Python project that turns a **DJI RoboMaster Tello Talent** drone into an autonomous guardian:
-
-* **Fall Detection** – real-time classification of human falls from the onboard camera using traditional ML (K-NN, SVM) and CNN-based models.  
-* **Emergency Gestures** – recognizes a _“Help!”_ gesture to trigger assistance and a _“Safe”_ gesture to deactivate alerts.  
-* **Caregiver Alerts** – sends configurable SMS/e-mail notifications with last-seen image & GPS coordinates.  
-* **Safe Flight Control** – handles take-off, hover, patrol, and landing through `djitellopy`, with geofence & battery safeguards.  
+> Turn a DJI RoboMaster **Tello Talent** drone into a fall-aware flying assistant.
 
 ---
 
-## 1. Project Structure
+## Contents
+
+| File / Dir | Purpose |
+|------------|---------|
+| **main.py** | Primary entry-point – connects to drone/camera, loads chosen model, runs detection loop. |
+| **main_m1.py** | Alternate entry-point for “method 1” experiments (kept for reproducibility). |
+| **camera.py** | Generic USB/web-cam frame capture. |
+| **camera_drone.py** | Tello video-stream wrapper built on `djitellopy`. |
+| **functions.py** | Utility helpers (frame pre-proc, drawing bboxes, SMS/e-mail alerts, logging). |
+| **KNN_meth1.py** / **KNN_meth2.py** | K-Nearest-Neighbours fall-detection pipelines (two variants). |
+| **LogReg_m1.py** / **LogReg_m2.py** | Logistic-regression versions. |
+| **SVM_meth1.py** / **SVM_meth2.py** | Support-Vector-Machine versions. |
+| **C_parameter_*.py** | Grid-search scripts to tune the `C` hyper-parameter for LR & SVM (baseline vs. method 1). |
+| **README.md** | This file. |
+
+> **Why so many “\_m1” files?**  
+> “method 1” is the lightweight pipeline optimised for real-time onboard inference.  
+> Files without `_m1` are the original, higher-accuracy but slower baselines.
+
+---
+
+## Quick-Start
+
+### 1  Set-up
+
+```bash
+# Clone & enter repo
+git clone https://github.com/<your-user>/<repo>.git
+cd <repo>
+
+# Python 3.10+ venv
+python -m venv .venv
+source .venv/bin/activate         # Windows: .venv\Scripts\activate
+
+# Install deps
+pip install -r requirements.txt   # OpenCV, scikit-learn, djitellopy, etc.
 
