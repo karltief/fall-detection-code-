@@ -12,7 +12,7 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 file_path = r"C:\Users\UOE\PycharmProjects\ML_Fall\output_m2.csv"
 df = pd.read_csv(file_path)
 
-# Label the columns for the classification process
+# Label the columns for the classification processes
 X = df[df.columns[0:103]]
 y = df["Fall/NoFALL(1,0)"].values.ravel()
 
